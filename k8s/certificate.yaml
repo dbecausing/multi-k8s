@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+ 
+kind: Certificate
+metadata:
+  name: becausing-nl-tls
+spec:
+  secretName: becausing-nl
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: becausing.nl
+  dnsNames:
+    - becausing.nl
+    - www.becausing.nl
